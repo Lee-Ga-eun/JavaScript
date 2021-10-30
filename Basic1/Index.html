@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<!--
+    <div class="alert-box" id="alert">Alert 박스
+        <div><button onclick="알림창열기('none')">UI닫기</button></div>
+    </div>
+    <button onclick="알림창열기('block')">UI 띄우는 버튼</button>
+-->
+    <div class="alert-box" id="alert">
+        <p id="title">Alert box</p>
+        <button id="close">x</button>
+    </div>
+
+
+    <button onclick="버튼('아이디입력해라')">버튼1</button>
+
+    <button onclick="버튼('비번 입력해라')">버튼2</button>
+
+
+
+    <script>
+        // function 문법: 길고 복잡한 문법을 함수로 작성
+        // 변경할 HTML이 있으면, 그 하단에 JS를 작성해야 한다
+
+        function 버튼(구멍){
+            // 1. 제목 바꾸기  2. 열기
+            document.getElementById('title').innerHTML=구멍;
+            document.getElementById('alert').style.display='block';
+            
+        }
+
+    
+        function 알림창열기(구멍){
+            document.getElementById('alert').style.display=구멍;
+        }
+        // onclick 없이
+        document.getElementById('close').addEventListener('click',function(){
+            //scroll, click, mouseover 등
+            document.getElementById('alert').style.display='none';
+
+        });
+
+
+    </script>
+
+    
+</body>
+</html>
